@@ -58,7 +58,7 @@ class Slider {
             const pos = (i + this.counter) * this.step + this.shift
             const cos = Math.cos(pos)
             const sin = Math.sin(pos)
-            const scale = Math.max(0.4, (sin + 1) / 2)
+            const scale = Math.max(0.3, (sin + 1) / 2)
 
             if (sin == 1 && !item.classList.contains('done')) {
                 console.log()
@@ -109,6 +109,30 @@ class Slider {
                         break
                     case 'precish':
                         $('.timer-precish').countTo({
+                            from: 0,
+                            to: 50,
+                            speed: 2000,
+                            refreshInterval: 50,
+                        })
+                        break
+                    case 'burtoday6':
+                        $('.timer-burtoday6').countTo({
+                            from: 0,
+                            to: 50,
+                            speed: 2000,
+                            refreshInterval: 50,
+                        })
+                        break
+                    case 'burtoday7':
+                        $('.timer-burtoday7').countTo({
+                            from: 0,
+                            to: 50,
+                            speed: 2000,
+                            refreshInterval: 50,
+                        })
+                        break
+                    case 'burtoday8':
+                        $('.timer-burtoday8').countTo({
                             from: 0,
                             to: 50,
                             speed: 2000,
