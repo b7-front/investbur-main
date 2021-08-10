@@ -178,9 +178,11 @@ img {
 
 .fixed-btns {
     position: fixed;
-    z-index: 1;
+    z-index: 99999;
     right: 40px;
-    bottom: 140px;
+    bottom: 40px;
+    pointer-events: none;
+
     @media (max-width: 767.98px) {
         right: 15px;
         bottom: 30px;
@@ -191,9 +193,30 @@ img {
         box-shadow: 10px 11px 24px rgba(0, 3, 70, 0.24);
         border-radius: 80px;
         margin-bottom: 20px;
-        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        pointer-events: all;
+
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &.custom-chat {
+            pointer-events: none;
+            &::before {
+                position: absolute;
+                content: '';
+                right: 6px;
+                top: 6px;
+                border-radius: 100%;
+                width: 12px;
+                height: 12px;
+                background: #00923f;
+            }
+        }
+
+        img {
+            border-radius: 100%;
         }
 
         @media (max-width: 767.98px) {
@@ -203,6 +226,10 @@ img {
             bottom: 20px;
         }
     }
+}
+
+.b24-widget-button-pulse {
+    display: none !important;
 }
 
 #progress-loading {

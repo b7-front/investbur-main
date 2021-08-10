@@ -11,6 +11,14 @@ $(document).ready(function () {
         sectionSelector: '.fullsection',
     })
     Ascroll()
+
+    $.ajax({
+        type: 'POST',
+        url: '/widget.php',
+    }).done(function (msg) {
+        console.log(msg[0].photo)
+        $('.custom-chat img').attr('src', msg[0].photo)
+    })
 })
 
 $(window).scroll(function () {
