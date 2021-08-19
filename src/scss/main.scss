@@ -184,8 +184,8 @@ img {
     pointer-events: none;
 
     @media (max-width: 767.98px) {
-        right: 15px;
-        bottom: 30px;
+        right: 48px;
+        bottom: 48px;
     }
     &__item {
         width: 80px;
@@ -220,10 +220,8 @@ img {
         }
 
         @media (max-width: 767.98px) {
-            width: 60px;
-            height: 60px;
-            right: 15px;
-            bottom: 20px;
+            width: 70px;
+            height: 70px;
         }
     }
 }
@@ -250,6 +248,21 @@ img {
     background-repeat: no-repeat;
     background-image: url('../img/bg/home.jpg');
     padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+    &__bg {
+        position: absolute;
+        z-index: 0;
+        inset: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+        min-width: 100vw;
+        min-height: 100vh;
+        transition: all 0.5s;
+    }
+
     &__container {
         height: 100%;
         position: relative;

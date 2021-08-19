@@ -9,6 +9,15 @@ function Ascroll() {
 $(document).ready(function () {
     $('#fullpage').fullpage({
         sectionSelector: '.fullsection',
+        loopBottom: true,
+        onLeave: function (origin, destination) {
+            if (origin == 3 && destination == 1) {
+                // клик по ссылке
+                $('#to-main-2').click()
+
+                return false
+            }
+        },
     })
     Ascroll()
 
