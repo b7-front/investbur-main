@@ -1,6 +1,33 @@
+window.onpopstate = function (event) {
+    if (event && event.state) {
+        location.reload()
+    }
+}
+
 function Ascroll() {
     if ($(window).width() < 768) {
         $.fn.fullpage.setResponsive(true)
+
+        if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1) {
+            let lastP = $(window).scrollTop()
+
+            let clicked = false
+
+            var handlerTouchMove = function (e) {
+                setTimeout(() => {
+                    if ($(window).scrollTop() == lastP && !clicked) {
+                        $('#to-main-2')[0].click()
+                        clicked = true
+                    }
+                }, 100)
+            }
+
+            $('body').bind('touchend', function (e) {
+                $('body').bind('touchmove', handlerTouchMove)
+            })
+        } else {
+            $('body').unbind('touchmove', handlerTouchMove)
+        }
     } else {
         $.fn.fullpage.setResponsive(false)
     }
@@ -11,11 +38,13 @@ $(document).ready(function () {
         sectionSelector: '.fullsection',
         loopBottom: true,
         onLeave: function (origin, destination) {
+            if (destination == 1) {
+                document.getElementsByTagName('video')[0].play()
+            }
+
             if (origin == 3 && destination == 1) {
                 // клик по ссылке
-                $('#to-main-2').click()
-
-                return false
+                $('#to-main-2')[0].click()
             }
         },
     })

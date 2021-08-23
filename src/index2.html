@@ -209,6 +209,35 @@
                 </a>
             </div>
         </div>
-        @@include('_scripts.html')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            function Ascroll() {
+                if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1) {
+                    let lastP = $(window).scrollTop()
+                    console.log($(window).scrollTop() + $(window).height(), $(document).height())
+                    let clicked = false
+
+                    var handlerTouchMove = function (e) {
+                        setTimeout(() => {
+                            if ($(window).scrollTop() == lastP && !clicked) {
+                                $('#to-main-2')[0].click()
+
+                                clicked = true
+                            }
+                        }, 100)
+                    }
+
+                    $('body').bind('touchend', function (e) {
+                        $('body').bind('touchmove', handlerTouchMove)
+                    })
+                } else {
+                    $('body').unbind('touchmove', handlerTouchMove)
+                }
+            }
+
+            $(window).scroll(function () {
+                Ascroll()
+            })
+        </script>
     </body>
 </html>
