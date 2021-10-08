@@ -320,13 +320,20 @@ img {
     padding: 60px 0px;
     overflow: hidden;
     display: flex;
-    background-image: url('../img/bg/appeal.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 20vw 42vh;
+    background-image: url('../img/bg/appeal.jpg');
+    background-size: cover;
+    background-position: center;
+    // background-repeat: no-repeat;
+    // background-position: 20vw 42vh;
 
     @media (max-width: 991.98px) {
         padding: 40px 0px;
+    }
+
+    @media (max-width: 767.98px) {
+        background-image: url('../img/bg/appeal.png');
+        background-repeat: no-repeat;
+        background-position: 20vw 42vh;
     }
 
     &__title {
