@@ -126,7 +126,13 @@
                                     Улучшение инвестиционного климата, активное позиционирование региона на российском
                                     рынке – ключевые факторы, необходимые для экономического прорыва Республики Бурятия.
                                 </div>
-                                <a href="#" class="main-btn section-appeal__btn">Прямая связь инвестора с Главой РБ</a>
+                                <a
+                                    href="#"
+                                    class="main-btn section-appeal__btn"
+                                    data-toggle="modal"
+                                    data-target="#appealModal"
+                                    >Прямая связь инвестора с Главой РБ</a
+                                >
                             </div>
                             <div class="order-1 order-md-2 col-md-5 col-lg-5">
                                 <div class="section-appeal__image d-md-none">
@@ -207,6 +213,126 @@
                 <a href="/index1.php" id="to-main-2">
                     <img src="img/to-main-btn.png" alt="" />
                 </a>
+            </div>
+        </div>
+
+        <div
+            class="modal fade appeal-modal"
+            id="appealModal"
+            tabindex="-1"
+            aria-labelledby="appealModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header pb-0 border-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="appeal-line">
+                                        <h2 class="section-title appeal-line__title">Линия прямых обращений</h2>
+                                        <div class="appealine-item">
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__num">1</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="appealine-item__title">
+                                                        Направление обращения по вопросам инвестиционной деятельности
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__icon">
+                                                        <img src="img/content/appeal-line/interview.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="appealine-item">
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__num">2</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="appealine-item__title">
+                                                        Регистрация в системе электронного документооборота
+                                                    </div>
+                                                    <div class="appealine-item__text">
+                                                        1 рабочий день с момента поступления
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__icon">
+                                                        <img src="img/content/appeal-line/checking.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="appealine-item">
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__num">3</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="appealine-item__title">
+                                                        Направление запросов и подготовка материалов
+                                                    </div>
+                                                    <div class="appealine-item__text">3 рабочих дня</div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__icon">
+                                                        <img src="img/content/appeal-line/request.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="appealine-item">
+                                            <div class="form-row">
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__num">4</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="appealine-item__title">Подготовка ответов</div>
+                                                    <div class="appealine-item__text">
+                                                        5 рабочих дней
+                                                        <br />
+                                                        10 дней, если требуется получение дополнительной информации от
+                                                        органов исполнительной власти Республики Бурятия.
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="appealine-item__icon">
+                                                        <img src="img/content/appeal-line/contract.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <script data-b24-form="inline/6/web2kh" data-skip-moving="true">
+                                        ;(function (w, d, u) {
+                                            var s = d.createElement('script')
+                                            s.async = true
+                                            s.src = u + '?' + ((Date.now() / 180000) | 0)
+                                            var h = d.getElementsByTagName('script')[0]
+                                            h.parentNode.insertBefore(s, h)
+                                        })(
+                                            window,
+                                            document,
+                                            'https://cdn-ru.bitrix24.ru/b12985966/crm/form/loader_6.js'
+                                        )
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         @@include('_scripts.html')

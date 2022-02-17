@@ -623,3 +623,56 @@ img {
 .slider3d__list__step-button_next {
     right: 0;
 }
+
+.appeal-modal {
+    .modal-body {
+        @media (max-width: 1199.98px) {
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.appeal-line {
+    &__title {
+        margin-bottom: 30px;
+    }
+}
+
+.appealine-item {
+    margin-bottom: 40px;
+    color: #000000;
+    max-width: 430px;
+    &__num {
+        background: #f2f2f2;
+        width: 50px;
+        height: 50px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 50px;
+
+        text-align: center;
+        margin-right: 10px;
+    }
+    &__title {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #292e91;
+    }
+    &__icon {
+        margin-top: 10px;
+        width: 30px;
+        img {
+            width: 100%;
+        }
+    }
+}
