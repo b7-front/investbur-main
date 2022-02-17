@@ -37,10 +37,29 @@ img {
     background: linear-gradient(95.48deg, #f7ce38 -7.1%, #fc210d 97.71%);
     border-radius: 1px;
     filter: drop-shadow(10px 11px 24px rgba(114, 10, 0, 0.2));
+    position: relative;
+    height: 64px;
+    .swap-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+        &--hover {
+            opacity: 0;
+        }
+    }
 
     &:hover {
         color: #fff;
         text-decoration: none;
+        .swap-text {
+            opacity: 0;
+            &--hover {
+                opacity: 1;
+            }
+        }
     }
 }
 
